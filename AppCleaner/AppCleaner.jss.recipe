@@ -30,7 +30,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.fishd72.pkg.AppCleaner</string>
+	<string>com.github.jleggat.AppCleaner.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
