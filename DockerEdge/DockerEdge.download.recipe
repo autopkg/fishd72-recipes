@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Docker Edge.</string>
 	<key>Identifier</key>
-	<string>com.github.fishd72.download.Docker-Edge</string>
+	<string>com.github.fishd72.download.DockerEdge</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
