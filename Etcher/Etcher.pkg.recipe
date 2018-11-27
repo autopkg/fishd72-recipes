@@ -20,7 +20,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.andrewvalentine.download.Etcher</string>
+	<string>com.github.fishd72.download.Etcher</string>
 	<key>Process</key>
 	<array>
 		<dict>
