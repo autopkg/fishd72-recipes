@@ -10,25 +10,32 @@
 	<string>com.github.fishd72.download.Ghost</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://github-production-release-asset-2e65be.s3.amazonaws.com/42172597/a95b2bf4-9d49-11e8-8fb9-f1f99970bb07?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20181130%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20181130T130954Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=2a56812b7547574c23342b47c71edc26f3cae341b5b47431652498646021834e&amp;X-Amz-SignedHeaders=host&amp;actor_id=17091283&amp;response-content-disposition=attachment%3B%20filename%3Dghost-desktop-1.7.0-osx.dmg&amp;response-content-type=application%2Foctet-stream</string>
 		<key>NAME</key>
-		<string>Ghost</string>
+		<string>ghost-desktop</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.dmg</string>
-				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
+				<key>asset_regex</key>
+				<string>%NAME%-[\S]+\.dmg</string>
+				<key>github_repo</key>
+				<string>TryGhost/Ghost-Desktop</string>
 			</dict>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%url%</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
