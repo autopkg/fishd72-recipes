@@ -13,7 +13,7 @@
 		<key>BUNDLE_ID</key>
 		<string>com.electron.ghost</string>
 		<key>NAME</key>
-		<string>Ghost</string>
+		<string>ghost-desktop</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
