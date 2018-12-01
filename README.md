@@ -13,5 +13,5 @@ Mainly a bunch of stuff I'm experimenting with that are using other folks recipe
 -   JD-GUI - currently broken
 -   Keka - depends on hansen-m-recipes
 -   MongoDBCompass - independant
--   pg4Admin - depends on bnpl-recipes
 -   SafariTechnologyPreview - depends on jaharmi-recipes
+-   pg4Admin - depends on bnpl-recipes
