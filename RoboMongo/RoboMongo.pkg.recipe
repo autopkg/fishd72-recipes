@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Comment</key>
+		<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
+		<key>Description</key>
+		<string>Downloads the latest version of RoboMongo (Robo3T) and creates a package.</string>
+		<key>Identifier</key>
+		<string>com.github.fishd72.pkg.RoboMongo</string>
+		<key>Input</key>
+		<dict>
+			<key>APP_FILENAME</key>
+			<string>Robo 3T</string>
+			<key>BUNDLE_ID</key>
+			<string>com.3tsoftwarelabs.robo3t</string>
+			<key>NAME</key>
+			<string>RoboMongo</string>
+		</dict>
+		<key>MinimumVersion</key>
+		<string>1.0.0</string>
+		<key>ParentRecipe</key>
+		<string>com.github.valdore86.download.RoboMongo</string>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>input_plist_path</key>
+					<string>%pathname%/Robo 3T.app/Contents/Info.plist</string>
+					<key>plist_version_key</key>
+					<string>CFBundleVersion</string>
+				</dict>
+				<key>Processor</key>
+				<string>Versioner</string>
+			</dict>
+			<dict>
+				<key>Processor</key>
+				<string>AppPkgCreator</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
