@@ -5,9 +5,9 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.0.4 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Installs the latest version of visualvm.</string>
+	<string>Installs the latest version of VisualVM.</string>
 	<key>Identifier</key>
-	<string>com.github.fishd72.install.visualvm</string>
+	<string>com.github.fishd72.install.VisualVM</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.fishd72.download.visualvm</string>
+	<string>com.github.fishd72.download.VisualVM</string>
 	<key>Process</key>
 	<array>
 		<dict>

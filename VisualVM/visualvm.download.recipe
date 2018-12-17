@@ -5,15 +5,15 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.0.4 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of visualvm.</string>
+	<string>Downloads the latest version of VisualVM.</string>
 	<key>Identifier</key>
-	<string>com.github.fishd72.download.visualvm</string>
+	<string>com.github.fishd72.download.VisualVM</string>
 	<key>Input</key>
 	<dict>
 		<key>GITHUB_REPO</key>
 		<string>oracle/visualvm</string>
 		<key>NAME</key>
-		<string>visualvm</string>
+		<string>VisualVM</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -24,6 +24,8 @@
 			<dict>
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
+				<key>asset_regex</key>
+				<string>%NAME%_[\S]+\.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>GitHubReleasesInfoProvider</string>
@@ -40,6 +42,28 @@
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/VisualVM.app</string>
+				<key>requirement</key>
+				<string>identifier VisualVM and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = VB5E2TV963</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/VisualVM.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+				<string>CFBundleShortVersionString</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
 		</dict>
 	</array>
 </dict>
