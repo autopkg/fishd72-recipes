@@ -5,9 +5,9 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of MongoDB Compass and imports it into your JSS.</string>
+	<string>Downloads the latest version of MongoDB Compass Community and imports it into your JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.fishd72.jss.MongoDBCompass</string>
+	<string>com.github.fishd72.jss.MongoDBCompassCommunity</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -17,7 +17,7 @@
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupTemplate.xml</string>
 		<key>NAME</key>
-		<string>MongoDB Compass</string>
+		<string>MongoDB Compass Community</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Testing</string>
 		<key>POLICY_TEMPLATE</key>
@@ -30,7 +30,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.fishd72.pkg.MongoDBCompass</string>
+	<string>com.github.fishd72.pkg.MongoDBCompassCommunity</string>
 	<key>Process</key>
 	<array>
 		<dict>
