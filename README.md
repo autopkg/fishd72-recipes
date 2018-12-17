@@ -6,12 +6,17 @@ Mainly a bunch of stuff I'm experimenting with that are using other folks recipe
 -   Boostnote - independant
 -   Brave - depends on apettinen-recipes
 -   DockerEdge - independant
--   Etcher - currently independant, based on Andrew Valentine
+-   Etcher - based on Andrew Valentine
 -   Ghost - independant
 -   GoogleChromeCanary - depends on foigus-recipes
 -   HexFiend - depends on michalmmac-recipes
+-   IDEA-IU - depends on mosen-recipes
 -   JD-GUI - currently broken
 -   Keka - depends on hansen-m-recipes
--   MongoDBCompass - independant
+-   MongoDBCompassCommunity - independant
+-   Openshot - depends on peshay-recipes
+-   RoboMongo - depends on valdore86-recipes
 -   SafariTechnologyPreview - depends on jaharmi-recipes
+-   Shuttle - independant
+-   VisualVM - independant
 -   pg4Admin - depends on bnpl-recipes
