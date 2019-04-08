@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of AWS ECS-CLI binary.</string>
+	<key>Identifier</key>
+	<string>com.github.fishd72.download.ecs-cli</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>ecs-cli</string>
+		<key>URL</key>
+		<string>https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli</string>
+		<key>ARCHITECTURE</key>
+		<string>darwin-amd64</string>
+		<key>BRANCH</key>
+		<string>latest</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%URL%-%ARCHITECTURE%-%BRANCH%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
