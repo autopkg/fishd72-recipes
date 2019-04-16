@@ -17,7 +17,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.fishd72.pkg.AppCleaner</string>
+	<string>com.github.fishd72.pkg.AppCleaner</string>
 	<key>Process</key>
 	<array>
 		<dict>
