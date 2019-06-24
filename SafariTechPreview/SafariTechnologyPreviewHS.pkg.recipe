@@ -26,18 +26,15 @@
 		<key>Process</key>
 		<array>
 			<dict>
-			  <key>Arguments</key>
-			  <dict>
-				  <key>source_pkg</key>
-				  <string>%input_path%</string>
+				<key>Arguments</key>
+				<dict>
+					<key>source_pkg</key>
+					<string>%input_path%</string>
 					<key>pkg_path</key>
 					<string>%RECIPE_CACHE_DIR%/%NAME%-HS.pkg</string>
-			  </dict>
+				</dict>
 				<key>Processor</key>
 				<string>PkgCopier</string>
-			</dict>
-			<dict>
-
 			</dict>
 		</array>
 	</dict>
