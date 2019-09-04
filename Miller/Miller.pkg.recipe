@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.fishd72.download.miller</string>
+	<string>com.github.fishd72.download.Miller</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -43,7 +43,7 @@
                 <key>source_path</key>
                 <string>%pathname%</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/usr/local/bin/%NAME%</string>
+                <string>%pkgroot%/usr/local/bin/mlr</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
