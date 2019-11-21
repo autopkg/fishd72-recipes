@@ -36,9 +36,6 @@
 				<key>Processor</key>
 				<string>PkgCopier</string>
 			</dict>
-			<dict>
-
-			</dict>
 		</array>
 	</dict>
 </plist>
