@@ -20,21 +20,21 @@
 	<key>Process</key>
 	<array>
 		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>https://www.mongodb.com/download-center/compass</string>
-						<key>re_pattern</key>
-						<string>%MONGOPATTERN%</string>
-				</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.mongodb.com/download-center/compass</string>
+				<key>re_pattern</key>
+				<string>%MONGOPATTERN%</string>
+			</dict>
 		</dict>
 		<dict>
-      <key>Arguments</key>
+			<key>Arguments</key>
 			<dict>
-					<key>url</key>
-					<string>%match%</string>
+				<key>url</key>
+				<string>%match%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
