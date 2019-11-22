@@ -4,16 +4,16 @@
 <dict>
 	<key>Description</key>
 	<string>Downloads the latest version of x2Go remote client.</string>
-    <key>Comment</key>
-    <string>This recipe downloads an unsigned app from an insecure website. Use at your own risk!</string>
+    	<key>Comment</key>
+    	<string>This recipe downloads an unsigned app from an insecure website. Use at your own risk!</string>
 	<key>Identifier</key>
 	<string>com.github.fishd72.download.x2Go</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>x2Go</string>
-        <key>OS</key>
-        <string>10_13</string>
+        	<key>OS</key>
+        	<string>10_13</string>
 		<key>x2GoPATTERN</key>
 		<string>http:\/\/code\.x2go\.org\/releases\/X2GoClient_latest_macosx_%OS%.dmg</string>
 	</dict>
@@ -22,21 +22,21 @@
 	<key>Process</key>
 	<array>
 		<dict>
-				<key>Processor</key>
-				<string>URLTextSearcher</string>
-				<key>Arguments</key>
-				<dict>
-						<key>url</key>
-						<string>https://wiki.x2go.org/doku.php/download:start</string>
-						<key>re_pattern</key>
-						<string>%x2GoPATTERN%</string>
-				</dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://wiki.x2go.org/doku.php/download:start</string>
+				<key>re_pattern</key>
+				<string>%x2GoPATTERN%</string>
+			</dict>
 		</dict>
 		<dict>
-      <key>Arguments</key>
+			<key>Arguments</key>
 			<dict>
-					<key>url</key>
-					<string>%match%</string>
+				<key>url</key>
+				<string>%match%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
