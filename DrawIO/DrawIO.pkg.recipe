@@ -18,7 +18,7 @@
 		<key>MinimumVersion</key>
 		<string>1.0.0</string>
 		<key>ParentRecipe</key>
-		<string>com.github.peshay.download.draw.io</string>
+		<string>com.github.michalmmac.download.draw.io</string>
 		<key>Process</key>
 		<array>
 			<dict>
