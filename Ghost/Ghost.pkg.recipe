@@ -10,8 +10,6 @@
 	<string>com.github.fishd72.pkg.Ghost</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.electron.ghost</string>
 		<key>NAME</key>
 		<string>ghost-desktop</string>
 	</dict>

@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of VisualVM and creates a package.</string>
+	<key>Identifier</key>
+	<string>com.github.fishd72.pkg.VisualVM</string>
+	<key>Input</key>
 	<dict>
-		<key>Comment</key>
-		<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
-		<key>Description</key>
-		<string>Downloads the latest version of VisualVM and creates a package.</string>
-		<key>Identifier</key>
-		<string>com.github.fishd72.pkg.VisualVM</string>
-		<key>Input</key>
-		<dict>
-			<key>BUNDLE_ID</key>
-			<string>com.apple.sh</string>
-			<key>NAME</key>
-			<string>VisualVM</string>
-		</dict>
-		<key>MinimumVersion</key>
-		<string>1.0.0</string>
-		<key>ParentRecipe</key>
-		<string>com.github.fishd72.download.VisualVM</string>
-		<key>Process</key>
-		<array>
-			<dict>
-				<key>Arguments</key>
-				<dict>
-					<key>bundleid</key>
-					<string>com.apple.sh</string>
-				</dict>
-				<key>Processor</key>
-				<string>AppPkgCreator</string>
-			</dict>
-		</array>
+		<key>NAME</key>
+		<string>VisualVM</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.fishd72.download.VisualVM</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>bundleid</key>
+				<string>com.apple.sh</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+	</array>
+</dict>
 </plist>

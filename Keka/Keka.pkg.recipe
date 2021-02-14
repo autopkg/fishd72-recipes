@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Keka and creates a package.</string>
+	<key>Identifier</key>
+	<string>com.github.fishd72.pkg.Keka</string>
+	<key>Input</key>
 	<dict>
-		<key>Comment</key>
-		<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
-		<key>Description</key>
-		<string>Downloads the latest version of Keka and creates a package.</string>
-		<key>Identifier</key>
-		<string>com.github.fishd72.pkg.Keka</string>
-		<key>Input</key>
-		<dict>
-			<key>APP_FILENAME</key>
-			<string>Keka</string>
-			<key>BUNDLE_ID</key>
-			<string>com.aone.keka</string>
-			<key>NAME</key>
-			<string>Keka</string>
-		</dict>
-		<key>MinimumVersion</key>
-		<string>1.0.0</string>
-		<key>ParentRecipe</key>
-		<string>com.github.hansen-m.download.Keka</string>
-		<key>Process</key>
-		<array>
-			<dict>
-				<key>Processor</key>
-				<string>AppPkgCreator</string>
-			</dict>
-		</array>
+		<key>APP_FILENAME</key>
+		<string>Keka</string>
+		<key>NAME</key>
+		<string>Keka</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.hansen-m.download.Keka</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+	</array>
+</dict>
 </plist>
