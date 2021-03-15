@@ -1,41 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Safari Technology Preview for High Sierra and extracts the package.</string>
+	<key>Identifier</key>
+	<string>com.github.fishd72.pkg.SafariTechnologyPreviewHS</string>
+	<key>Input</key>
 	<dict>
-		<key>Comment</key>
-		<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
-		<key>Description</key>
-		<string>Downloads the latest version of Safari Technology Preview for High Sierra and extracts the package.</string>
-		<key>Identifier</key>
-		<string>com.github.fishd72.pkg.SafariTechnologyPreviewHS</string>
-		<key>Input</key>
-		<dict>
-			<key>APP_FILENAME</key>
-			<string>Safari Technology Preview</string>
-			<key>BUNDLE_ID</key>
-			<string>com.apple.SafariTechnologyPreview</string>
-			<key>NAME</key>
-			<string>SafariTechnologyPreview</string>
-			<key>DOWNLOAD_URL</key>
-			<string>https://secure-appldnld.apple.com/STP/041-22612-20181114-184D1786-AA54-11E8-82D8-98865F2D1BD8/SafariTechnologyPreview.dmg</string>
-		</dict>
-		<key>MinimumVersion</key>
-		<string>1.0.0</string>
-		<key>ParentRecipe</key>
-		<string>com.github.jaharmi.download.SafariTechnologyPreview</string>
-		<key>Process</key>
-		<array>
-			<dict>
-			  <key>Arguments</key>
-			  <dict>
-				  <key>source_pkg</key>
-				  <string>%input_path%</string>
-					<key>pkg_path</key>
-					<string>%RECIPE_CACHE_DIR%/%NAME%-HS.pkg</string>
-			  </dict>
-				<key>Processor</key>
-				<string>PkgCopier</string>
-			</dict>
-		</array>
+		<key>APP_FILENAME</key>
+		<string>Safari Technology Preview</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://secure-appldnld.apple.com/STP/041-22612-20181114-184D1786-AA54-11E8-82D8-98865F2D1BD8/SafariTechnologyPreview.dmg</string>
+		<key>NAME</key>
+		<string>SafariTechnologyPreview</string>
 	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.jaharmi.download.SafariTechnologyPreview</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-HS.pkg</string>
+				<key>source_pkg</key>
+				<string>%input_path%</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCopier</string>
+		</dict>
+	</array>
+</dict>
 </plist>

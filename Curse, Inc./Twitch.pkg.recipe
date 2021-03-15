@@ -10,8 +10,6 @@
 	<string>com.github.fishd72.pkg.Twitch</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.twitch.desktop</string>
 		<key>NAME</key>
 		<string>Twitch</string>
 	</dict>
