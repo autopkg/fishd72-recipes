@@ -13,7 +13,7 @@
 		<key>APP_FILENAME</key>
 		<string>Brave</string>
 		<key>NAME</key>
-		<string>Brave</string>
+		<string>BraveBrowser</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -24,6 +24,11 @@
 		<dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
