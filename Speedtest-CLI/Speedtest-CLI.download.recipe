@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple/DTD PLIST 1.0//EN" "http://apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Description</key>
+    <string>Downloads the latest version of the Speedtest CLI tool.</string>
+    <key>Identifier</key>
+    <string>com.github.fishd72.download.speedtest-cli</string>
+    <key>Input</key>
+    <dict>
+      <key>SOURCE_URL</key>
+      <string>https://raw.githubusercontent.com/teamookla/homebrew-speedtest/master/speedtest.rb</string>
+      <key>REGEX</key>
+      <string>https.*?ookla-speedtest-.*-macosx-universal.tgz</string>
+    </dict>
+    <key>Process</key>
+    <array>
+      <dict>
+        <key>Processor</key>
+        <string>URLTextSearcher</string>
+        <key>Arguments</key>
+        <dict>
+          <key>url</key>
+          <string>%SOURCE_URL%</string>
+          <key>re_pattern</key>
+          <string>%REGEX%</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>Processor</key>
+        <string>URLDownloader</string>
+        <key>Arguments</key>
+        <dict>
+          <key>url</key>
+          <string>%match%</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>Processor</key>
+        <string>EndOfCheckPhase</string>
+      </dict>
+    </array>
+  </dict> 
+</plist>
