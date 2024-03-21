@@ -10,8 +10,10 @@
     <dict>
       <key>SOURCE_URL</key>
       <string>https://raw.githubusercontent.com/teamookla/homebrew-speedtest/master/speedtest.rb</string>
-      <key>REGEX</key>
+      <key>URL_REGEX</key>
       <string>https.*?ookla-speedtest-.*-macosx-universal.tgz</string>
+      <key>VERSION_REGEX</key>
+      <string>version\s*"([0-9.]+)"</string>
     </dict>
     <key>Process</key>
     <array>
@@ -23,7 +25,20 @@
           <key>url</key>
           <string>%SOURCE_URL%</string>
           <key>re_pattern</key>
-          <string>%REGEX%</string>
+          <string>%URL_REGEX%</string>
+        </dict>
+      </dict>
+      <dict>
+        <key>Processor</key>
+        <string>URLTextSearcher</string>
+        <key>Arguments</key>
+        <dict>
+          <key>url</key>
+          <string>%SOURCE_URL%</string>
+          <key>re_pattern</key>
+          <string>%VERSION_REGEX%</string>
+          <key>result_output_var_name</key>
+          <string>version</string>
         </dict>
       </dict>
       <dict>
