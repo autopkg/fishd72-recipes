@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple/DTD PLIST 1.0//EN" "http://apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Description</key>
+    <string>Downloads, packages and imports into Munki latest version of the AZCopy CLI</string>
+    <key>Identifier</key>
+    <string>com.github.fishd72.munki.azcopy-cli</string>
+    <key>Input</key>
+    <dict>
+      <key>DISPLAY_NAME</key>
+      <string>AZCopy CLI</string>
+      <key>NAME</key>
+      <string>AZCopy_CLI</string>
+      <key>MUNKI_CATEGORY</key>
+      <string>Developer</string>
+      <key>MUNKI_REPO_SUBDIR</key>
+      <string>%NAME%</string>
+      <key>pkginfo</key>
+      <dict>
+        <key>catalogs</key>
+	<array>
+	  <string>testing</string>
+	</array>
+        <key>category</key>
+        <string>%MUNKI_CATEGORY%</string>
+        <key>description</key>
+        <string>AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account. This article helps you download AzCopy, connect to your storage account, and then transfer data.</string>
+        <key>developer</key>
+        <string>Microsoft</string>
+        <key>display_name</key>
+        <string>%DISPLAY_NAME%</string>
+        <key>name</key>
+        <string>%NAME%</string>
+      </dict>
+    </dict>
+    <key>ParentRecipe</key>
+    <string>com.github.fishd72.pkg.azcopy-cli</string>
+    <key>MinimumVersion</key>
+    <string>0.3.0</string>
+    <key>Process</key>
+    <array>
+      <dict>
+        <key>Processor</key>
+        <string>MunkiImporter</string>
+        <key>Arguments</key>
+        <dict>
+          <key>pkg_path</key>
+          <string>%pkg_path%</string>
+          <key>repo_subdirectory</key>
+          <string>%MUNKI_REPO_SUBDIR%</string>
+        </dict>
+      </dict>
+    </array>
+  </dict> 
+</plist>
