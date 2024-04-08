@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of the AZCopy CLI tool.</string>
     <key>Comment</key>
-    <string>By default, it downloads X86, to download ARM64, add -arm64 to ARCH string.</string>
+    <string>By default, it downloads X86, to download ARM64, add -arm64 to ARCH string. It relies on jazzace-recipes for the TextSearcher processor.</string>
     <key>Identifier</key>
     <string>com.github.fishd72.download.azcopy-cli</string>
     <key>Input</key>
