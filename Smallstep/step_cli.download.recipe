@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of the Smallstep CLI tool.</string>
+  <key>Comment</key>
+  <string>Need to specify amd64 or arm64 accordingly in the ARCH variable.</string>
+  <key>Identifier</key>
+	<string>com.github.fishd72.download.step-cli</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>step</string>
+    <key>ARCH</key>
+    <string>arm64</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
+			<key>Arguments</key>
+			<dict>
+				<key>asset_regex</key>
+				<string>%NAME%_darwin_([0-9.]+)\_%ARCH%\.tar\.gz</string>
+				<key>github_repo</key>
+				<string>smallstep/cli</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%url%</string>
+        </dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
