@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Description</key>
+    <string>Downloads the latest release version of Wiz CLI for macOS.</string>
+    <key>Identifier</key>
+    <string>com.github.fishd72.download.wiz-cli</string>
+    <key>Input</key>
+    <dict>
+      <key>NAME</key>
+      <string>wizcli</string>
+      <key>ARCH</key>
+      <string>arm64</string>
+      <key>URL</key>
+      <string>https://wizcli.app.wiz.io</string>
+      <key>VERSION</key>
+      <string>latest</string>
+      </dict>
+    <key>MinimumVersion</key>
+    <string>0.3.0</string>
+    <key>Process</key>
+    <array>
+      <dict>
+        <key>Arguments</key>
+        <dict>
+          <key>filename</key>
+          <string>%NAME%</string>
+          <key>url</key>
+          <string>%URL%/%VERSION%/%NAME%-darwin-%ARCH%</string>
+          <key>prefetch_filename</key>
+          <true/>
+          <key>curl_opts</key>
+          <array>
+            <string>--create-file-mode</string>
+            <string>0755</string>
+            </array>
+          </dict>
+        <key>Processor</key>
+        <string>URLDownloader</string>
+        </dict>
+      <dict>
+        <key>Processor</key>
+        <string>EndOfCheckPhase</string>
+        </dict>
+      </array>
+    </dict>
+  </plist>
+

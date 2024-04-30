@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple/DTD PLIST 1.0//EN" "http://apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Description</key>
+    <string>Downloads, packages and imports into Munki latest version of the Wiz CLI</string>
+    <key>Identifier</key>
+    <string>com.github.fishd72.munki.wiz-cli</string>
+    <key>Input</key>
+    <dict>
+      <key>DISPLAY_NAME</key>
+      <string>Wiz CLI</string>
+      <key>NAME</key>
+      <string>Wiz_CLI</string>
+      <key>MUNKI_CATEGORY</key>
+      <string>Developer</string>
+      <key>MUNKI_REPO_SUBDIR</key>
+      <string>%NAME%</string>
+      <key>pkginfo</key>
+      <dict>
+        <key>catalogs</key>
+	<array>
+	  <string>testing</string>
+	</array>
+        <key>category</key>
+        <string>%MUNKI_CATEGORY%</string>
+        <key>description</key>
+        <string>Wiz CLI is a locally deployed command line tool that detects sensitive data and secrets and prevents security misconfigurations and vulnerabilities early in the development cycle. Wiz CLI helps you shift your security policies left by empowering DevOps (and others) to prevent insecure resources from ever being deployed. Moreover, Wiz CLI scales effortlessly, empowering your enforcement of security policies.</string>
+        <key>developer</key>
+        <string>Wiz.io</string>
+        <key>display_name</key>
+        <string>%DISPLAY_NAME%</string>
+        <key>name</key>
+        <string>%NAME%</string>
+      </dict>
+    </dict>
+    <key>ParentRecipe</key>
+    <string>com.github.fishd72.pkg.wiz-cli</string>
+    <key>MinimumVersion</key>
+    <string>0.3.0</string>
+    <key>Process</key>
+    <array>
+      <dict>
+        <key>Processor</key>
+        <string>MunkiImporter</string>
+        <key>Arguments</key>
+        <dict>
+          <key>pkg_path</key>
+          <string>%pkg_path%</string>
+          <key>repo_subdirectory</key>
+          <string>%MUNKI_REPO_SUBDIR%</string>
+        </dict>
+      </dict>
+    </array>
+  </dict> 
+</plist>
