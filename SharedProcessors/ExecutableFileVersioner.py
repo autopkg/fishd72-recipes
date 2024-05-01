@@ -19,21 +19,6 @@ class ExecutableFileVersioner(Processor):
                 "by FileFinder. "
             ),
         },
-        "interpreter_path": {
-            "required": False,
-            "default": "/usr/bin/python",
-            "description": (
-                "Full path to the interpreter to call the executable "
-                "file, if needed. "
-            ),
-        },
-        "interpreter_argument": {
-            "required": False,
-            "description": (
-                "Argument passed to the interpreter for execution "
-                "file, if needed. "
-            ),
-        },
         "version_argument": {
             "required": True,
             "description": (
@@ -55,9 +40,9 @@ class ExecutableFileVersioner(Processor):
             self.output("Found executable at %s" % self.env['found_filename'])
 
         try:
-            cmd = subprocess.check_output([ self.env['interpreter_path'], self.env['interpreter_argument'], self.env['found_filename'], self.env['version_argument']])
+            cmd = subprocess.run([ self.env['found_filename'], self.env['version_argument']], capture_output=True, text=True)
             # Get version and remove offending new line at the end
-            self.env['version'] = cmd.rstrip('\n')
+            self.env['version'] = cmd.stderr.rstrip('\n')
             self.output("Version: %s" % self.env['version'])
         except OSError:
             raise ProcessorError("Can't find %s" % (self.env['found_filename']))
