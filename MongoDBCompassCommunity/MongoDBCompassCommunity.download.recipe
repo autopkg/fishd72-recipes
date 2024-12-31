@@ -5,37 +5,37 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.0.5 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of MongoDB Compass Community.</string>
+	<string>Downloads the latest version of MongoDB Compass Community.
+	
+Valid values for ARCH include:
+- "x64" (default, Intel)
+- "arm64" (Apple Silicon)
+</string>
 	<key>Identifier</key>
 	<string>com.github.fishd72.download.MongoDBCompassCommunity</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>MongoDB Compass Community</string>
-		<key>MONGOPATTERN</key>
-		<string>https:\/\/downloads\.mongodb\.com\/compass\/mongodb-compass-community-[\S]+-darwin-x64\.dmg</string>
+		<key>ARCH</key>
+		<string>x64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>Process</key>
 	<array>
+	<dict>
+		<key>Processor</key>
+		<string>GitHubReleasesInfoProvider</string>
+		<key>Arguments</key>
 		<dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>https://www.mongodb.com/download-center/compass</string>
-				<key>re_pattern</key>
-				<string>%MONGOPATTERN%</string>
-			</dict>
+			<key>github_repo</key>
+			<string>mongodb-js/compass</string>
+			<key>asset_regex</key>
+			<string>mongodb-compass-[\d\.]+-darwin-%ARCH%\.dmg</string>
 		</dict>
+	</dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>%match%</string>
-			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 		</dict>
@@ -47,9 +47,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/MongoDB Compass Community.app</string>
+				<string>%pathname%/MongoDB Compass.app</string>
 				<key>requirement</key>
-				<string>identifier "com.mongodb.compass-community" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "4XWMY46275"</string>
+				<string>identifier "com.mongodb.compass" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "4XWMY46275"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
@@ -58,7 +58,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pathname%/MongoDB Compass Community.app/Contents/Info.plist</string>
+				<string>%pathname%/MongoDB Compass.app/Contents/Info.plist</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
