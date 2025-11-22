@@ -17,7 +17,7 @@
       <key>ARCH</key>
       <string>-arm64</string>
       <key>VER_REGEX</key>
-      <string>^.*\/azcopy_darwin_a..64_([0-9.]+)\.zip</string> 
+      <string>^.*\/azcopy_darwin_a..64_([0-9.]+)\.zip</string>
     </dict>
     <key>Process</key>
     <array>
@@ -49,6 +49,10 @@
       </dict>
       <dict>
         <key>Processor</key>
+        <string>EndOfCheckPhase</string>
+      </dict>
+      <dict>
+        <key>Processor</key>
         <string>com.github.jazzace.processors/TextSearcher</string>
         <key>Arguments</key>
         <dict>
@@ -60,10 +64,6 @@
           <string>version</string>
         </dict>
       </dict>
-      <dict>
-        <key>Processor</key>
-        <string>EndOfCheckPhase</string>
-      </dict>
     </array>
-  </dict> 
+  </dict>
 </plist>
