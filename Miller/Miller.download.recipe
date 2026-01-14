@@ -10,7 +10,7 @@
 	<dict>
 		<key>NAME</key>
 		<string>Miller</string>
-		<key>PLATFORM</name>
+		<key>PLATFORM</key>
 		<string>arm64</string>
 	</dict>
 	<key>MinimumVersion</key>
